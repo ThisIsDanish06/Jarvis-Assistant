@@ -23,7 +23,7 @@ from selenium.webdriver.common.by import By
 # sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
 #     client_id="SPOTIFY_CLIENT_ID",
 #     client_secret="SPOTIFY_CLIENT_SECRET",
-#     redirect_uri="POTIFY_REDIRECT_URI",
+#     redirect_uri="SPOTIFY_REDIRECT_URI",
 #     scope="user-modify-playback-state user-read-playback-state"
 # ))
 
