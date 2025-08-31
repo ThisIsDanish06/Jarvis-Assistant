@@ -21,9 +21,9 @@ from selenium.webdriver.common.by import By
 
 
 # sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
-#     client_id="93bd16c6381c49438db5fa1bcb471e2f",
-#     client_secret="aa7780ec1b864f26aea4992e92d8a9d5",
-#     redirect_uri="http://127.0.0.1:8000/callback",
+#     client_id="SPOTIFY_CLIENT_ID",
+#     client_secret="SPOTIFY_CLIENT_SECRET",
+#     redirect_uri="POTIFY_REDIRECT_URI",
 #     scope="user-modify-playback-state user-read-playback-state"
 # ))
 
@@ -34,7 +34,7 @@ from selenium.webdriver.common.by import By
 # ========================
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
-newsapi = "7f757406e6a345d3b6ffec56982d61e9"
+newsapi = "NEWSAPI_KEY"
 
 def speak_old(text):
     engine.say(text)
@@ -187,7 +187,7 @@ def processCommands(c):
 
         # News
         elif "news" in c.lower():
-            r = requests.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=7f757406e6a345d3b6ffec56982d61e9")
+            r = requests.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=NEWSAPI_KEY")
             if r.status_code==200:
                 data = r.json()     # parse the json response
                 articles = data.get('articles', [])      # extract the articles
